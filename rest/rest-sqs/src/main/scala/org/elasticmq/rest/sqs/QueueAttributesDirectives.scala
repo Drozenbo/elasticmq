@@ -31,9 +31,12 @@ trait QueueAttributesDirectives {
     val MaximumMessageSizeAttribute = "MaximumMessageSize"
     val MessageRetentionPeriodAttribute = "MessageRetentionPeriod"
     val FifoQueueAttribute = "FifoQueue"
+    val KmsMasterKeyIdAttribute = "KmsMasterKeyId"
+    val KmsDataKeyReusePeriodSecondsAttribute = "KmsDataKeyReusePeriodSeconds"
 
     val AllUnsupportedAttributeNames: List[String] = PolicyAttribute :: MaximumMessageSizeAttribute ::
-      MessageRetentionPeriodAttribute :: FifoQueueAttribute :: Nil
+      MessageRetentionPeriodAttribute :: FifoQueueAttribute :: KmsMasterKeyIdAttribute ::
+      KmsDataKeyReusePeriodSecondsAttribute :: Nil
   }
 
   object FifoAttributeNames {
